@@ -363,6 +363,9 @@ annotateCNVs <- function(cnv, txdb, anno=NULL,
 #' then annotates each segment and attributes a value to each gene in the knownGenes 
 #' data structure
 #'
+#' @examples
+#'  annotateRDS(fit.val.df, 'SampleX', 'ASCAT', build='hg19', bin.size=50000)
+#' 
 #' @param fit.val A dataframe of the *.gammaEval.txt file
 #' @param sample Sample name 
 #' @param segmenter Segmenter used (only works with ASCAT)
@@ -373,9 +376,6 @@ annotateCNVs <- function(cnv, txdb, anno=NULL,
 #' @return Returns a list containing 3 elements: 'seg', 'genes', and 'bins'
 #' for annotated datastructure fo a seg file, genes per row, and bins per row
 #' @export
-#'
-#' @examples
-#'  annotateRDS(fit.val.df, 'SampleX', 'ASCAT', build='hg19', bin.size=50000)
 annotateRDS <- function(fit.val, sample, segmenter, build='hg19', 
                         bin.size=50000, feature.set=c('bins'), load.l2r=TRUE, ...){
   print(paste0("Bin size: ", bin.size))
@@ -461,11 +461,11 @@ annotateRDS <- function(fit.val, sample, segmenter, build='hg19',
 #' @param cluster.type Cluster type [Default=PSOCK]
 #' @param ... 
 #'
-#' @return Returns annotateRDS() objects
-#' @export
-#'
 #' @examples
 #'     gr.cnv <- annotateRDS.Batch(all.fits, toupper(segmenter), nthread=3)
+#' 
+#' @return Returns annotateRDS() objects
+#' @export
 annotateRDS.Batch <- function(all.fits, segmenter, nthread = 1, 
                               cluster.type = "PSOCK", bin.size=50000, ...){
   if (length(all.fits) < nthread) nthread <- length(all.fits)

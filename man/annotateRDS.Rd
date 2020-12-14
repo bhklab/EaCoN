@@ -43,4 +43,5 @@ data structure
 }
 \examples{
  annotateRDS(fit.val.df, 'SampleX', 'ASCAT', build='hg19', bin.size=50000)
+
 }

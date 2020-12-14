@@ -34,4 +34,5 @@ Batch wrapper for annotateRDS()
 }
 \examples{
     gr.cnv <- annotateRDS.Batch(all.fits, toupper(segmenter), nthread=3)
+
 }

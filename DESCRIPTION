@@ -48,4 +48,4 @@ Description: Easy copy-number analysis for Affymetrix microarrays (snp6.0, CytoS
 License: MIT + file LICENSE
 LazyData: false
 Byte-Compile: yes
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
