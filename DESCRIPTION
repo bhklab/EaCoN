@@ -2,7 +2,7 @@ Encoding: UTF-8
 Package: EaCoN
 Type: Package
 Title: EaCoN : Easy Copy Number !
-Version: 0.3.4-1
+Version: 0.3.5
 Date: 2018-12-10
 Author: Bastien Job
 Authors@R: person("Bastien", "Job", email = "bastien.job@inserm.fr", role = c("aut", "cre"))
