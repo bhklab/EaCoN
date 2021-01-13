@@ -16,7 +16,7 @@ loadL2R <- function(sample, segmenter){
   return(l2r)
 }
 
-cleanL2Rdat <- function(data){
+cleanL2Rdat <- function(data) {
   l2r.segments <- data$cbs$nocut
   l2r.segments$Value <- l2r.segments$Log2Ratio
   
