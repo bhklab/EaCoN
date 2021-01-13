@@ -308,7 +308,7 @@ segmentCNVs <- function(cnv, bed, reduce='mean', feature.id='bins', l2r.dat=NULL
   olaps = findOverlaps(cnv0, anno)
   mcols(olaps)$gene_id = anno$gene_id[subjectHits(olaps)]  # Fixed the code here
   cnv_factor = factor(queryHits(olaps), levels=seq_len(queryLength(olaps)))
-  gene.id <- splitAsList(mcols(olaps)$gene_id, cnv_factor)
+  gene.id <- IRanges::splitAsList(mcols(olaps)$gene_id, cnv_factor)
   return(gene.id)
 }
 
